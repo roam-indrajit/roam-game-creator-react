@@ -8,6 +8,9 @@ const Page2 = ({ onPrev, onNext, data, setData }) => {
   const handleDropdownChange = (e) => {
     const selectedValue = e.target.value;
     setSelectedOption(selectedValue);
+
+    // Update the formData with the selected gameType
+  setData({ ...data, gameType: selectedValue });
   };
 
   const handleCheckboxChange = (name, isChecked) => {
@@ -35,26 +38,26 @@ const Page2 = ({ onPrev, onNext, data, setData }) => {
       {/* Conditional rendering of checkboxes based on dropdown selection */}
       {(selectedOption === 'DeathMatch' || selectedOption === 'Elimination') && (
         <Checkbox
-          label="Checkbox 1"
+          label="Hand Gun"
           name="checkbox1"
-          checked={data.checkbox1}
-          onChange={(isChecked) => handleCheckboxChange('checkbox1',isChecked)}
+          checked={data.handgun}
+          onChange={(isChecked) => handleCheckboxChange('handgun',isChecked)}
         />
       )}
       {selectedOption === 'Elimination' && (
         <Checkbox
-          label="Checkbox 2"
+          label="Rifels"
           name="checkbox2"
-          checked={data.checkbox2}
-          onChange={(isChecked) => handleCheckboxChange('checkbox2', isChecked)}
+          checked={data.rifel}
+          onChange={(isChecked) => handleCheckboxChange('rifel', isChecked)}
         />
       )}
       {selectedOption === 'Battle Royal' && (
         <Checkbox
-          label="Checkbox 3"
+          label="Grenade"
           name="checkbox3"
-          checked={data.checkbox3}
-          onChange={(isChecked) => handleCheckboxChange('checkbox3', isChecked)}
+          checked={data.grenade}
+          onChange={(isChecked) => handleCheckboxChange('grenade', isChecked)}
         />
       )}
       <br />

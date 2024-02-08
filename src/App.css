@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2fca75;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* App.css */
+body {
+  background-color: #313131;
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  /* Other styles */
 }
