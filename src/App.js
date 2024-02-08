@@ -49,6 +49,7 @@ function App() {
     axios.post('https://5wlyh93sil.execute-api.eu-west-2.amazonaws.com/vcDemo/game_config', gamedata)
       .then(response => {
         console.log('Response:', response.data);
+        alert("Game Created Sucessfully!.")
       })
       .catch(error => {
         console.error('Error:', error);
