@@ -10,6 +10,11 @@ const Page2 = ({ onPrev, onNext, data, setData }) => {
     setSelectedOption(selectedValue);
   };
 
+  const handleCheckboxChange = (name, isChecked) => {
+    setData({ ...data, [name]: isChecked.target.checked });
+    
+  };
+
   // Example options for the dropdown
   const dropdownOptions = [
     { label: 'DeathMatch', value: 'DeathMatch' },
@@ -33,7 +38,7 @@ const Page2 = ({ onPrev, onNext, data, setData }) => {
           label="Checkbox 1"
           name="checkbox1"
           checked={data.checkbox1}
-          onChange={(isChecked) => setData({ ...data, checkbox1: isChecked })}
+          onChange={(isChecked) => handleCheckboxChange('checkbox1',isChecked)}
         />
       )}
       {selectedOption === 'Elimination' && (
@@ -41,7 +46,7 @@ const Page2 = ({ onPrev, onNext, data, setData }) => {
           label="Checkbox 2"
           name="checkbox2"
           checked={data.checkbox2}
-          onChange={(isChecked) => setData({ ...data, checkbox2: isChecked })}
+          onChange={(isChecked) => handleCheckboxChange('checkbox2', isChecked)}
         />
       )}
       {selectedOption === 'Battle Royal' && (
@@ -49,7 +54,7 @@ const Page2 = ({ onPrev, onNext, data, setData }) => {
           label="Checkbox 3"
           name="checkbox3"
           checked={data.checkbox3}
-          onChange={(isChecked) => setData({ ...data, checkbox3: isChecked })}
+          onChange={(isChecked) => handleCheckboxChange('checkbox3', isChecked)}
         />
       )}
       <br />
