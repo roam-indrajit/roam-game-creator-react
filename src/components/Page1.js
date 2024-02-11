@@ -22,6 +22,12 @@ const Page1 = ({ onNext, data, setData }) => {
         value={data.creatorName}
         onChange={handleChange}
       />
+      <TextField
+        label="Describe your game world here."
+        name="mapPromt"
+        value={data.mapPromt}
+        onChange={handleChange}
+      />
       <button onClick={onNext}>Next</button>
     </div>
   );

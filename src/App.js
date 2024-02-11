@@ -10,6 +10,7 @@ function App() {
   const [formData, setFormData] = useState({
     gameName: '',
     creatorName: '',
+    mapPromt:'',
     checkbox1: false,
     checkbox2: false,
     checkbox3: false,
@@ -36,6 +37,7 @@ function App() {
     let gamedata = {
       "gameName": formData.gameName,
       "creatorName": formData.creatorName,
+      "mapPromt":formData.mapPromt,
       "gameconfig": {
         "checkbox1": formData.checkbox1,
         "checkbox2": formData.checkbox1,
